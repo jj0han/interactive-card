@@ -1,38 +1,152 @@
 .App {
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Bg__app {
+  background-image: url('./assets/images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Card {
+  position: absolute;
+  width: 550px;
+  height: 525px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 10vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Card > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.134);
+  padding: 30px;
+  position: absolute;
+  height: 250px;
+  width: 450px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.293);
+}
+
+.Card__front {
+  background-image: url("./assets/images/bg-card-front.png");
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.Card__front > img {
+  width: 30%;
+  object-fit: contain;
+}
+
+.Card__number {
+  color: var(--Light-grayish-violet);
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 20px;
+}
+
+.Card__front--info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card__front--date {
+  display: flex;
+}
+
+.Card__front--date > p, .Card__front--info > p {
+  font-size: 1rem;
+  color: var(--Light-grayish-violet);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.Card__back {
+  background-image: url("./assets/images/bg-card-back.png");
+  bottom: 0;
+  right: 0;
+}
+
+.Card__back--cvc {
+  font-size: 1rem;
+  position: absolute;
+  display: block;
+  top: 45%;
+  right: 15%;
+  color: var(--Light-grayish-violet);
+  letter-spacing: 0.2rem;
+}
+
+.Info {
+  margin: auto;
+  margin-left: 30%;
+  width: 350px;
+}
+
+.Info__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.Info__inputs {
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 7px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+.Info__line {
+  display: flex;
+  gap: 20px;
+}
+
+.Info__date > div {
+  display: flex;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Info__date--inputs {
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Info__btn {
+  background-color: var(--Very-dark-violet);
+  border-radius: 5px;
+  color: var(--Light-grayish-violet);
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* @media screen and (max-height: 700px){
+  .Card > div {
+    height: 200px;
+    width: 370px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Card {
+    width: 450px;
+    height: 425px;
   }
 }
+
+@media screen and (max-width: 1140px){
+  .Card {
+    width: 450px;
+    height: 350px;
+  }
+
+  .Card > div {
+    height: 170px;
+    width: 300px;
+  }
+} */
